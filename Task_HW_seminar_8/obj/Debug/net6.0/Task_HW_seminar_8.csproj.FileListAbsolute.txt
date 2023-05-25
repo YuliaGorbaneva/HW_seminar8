@@ -1,0 +1,15 @@
+E:\HW_seminar8\Task_HW_seminar_8\bin\Debug\net6.0\Task_HW_seminar_8.exe
+E:\HW_seminar8\Task_HW_seminar_8\bin\Debug\net6.0\Task_HW_seminar_8.deps.json
+E:\HW_seminar8\Task_HW_seminar_8\bin\Debug\net6.0\Task_HW_seminar_8.runtimeconfig.json
+E:\HW_seminar8\Task_HW_seminar_8\bin\Debug\net6.0\Task_HW_seminar_8.dll
+E:\HW_seminar8\Task_HW_seminar_8\bin\Debug\net6.0\Task_HW_seminar_8.pdb
+E:\HW_seminar8\Task_HW_seminar_8\obj\Debug\net6.0\Task_HW_seminar_8.csproj.AssemblyReference.cache
+E:\HW_seminar8\Task_HW_seminar_8\obj\Debug\net6.0\Task_HW_seminar_8.GeneratedMSBuildEditorConfig.editorconfig
+E:\HW_seminar8\Task_HW_seminar_8\obj\Debug\net6.0\Task_HW_seminar_8.AssemblyInfoInputs.cache
+E:\HW_seminar8\Task_HW_seminar_8\obj\Debug\net6.0\Task_HW_seminar_8.AssemblyInfo.cs
+E:\HW_seminar8\Task_HW_seminar_8\obj\Debug\net6.0\Task_HW_seminar_8.csproj.CoreCompileInputs.cache
+E:\HW_seminar8\Task_HW_seminar_8\obj\Debug\net6.0\Task_HW_seminar_8.dll
+E:\HW_seminar8\Task_HW_seminar_8\obj\Debug\net6.0\refint\Task_HW_seminar_8.dll
+E:\HW_seminar8\Task_HW_seminar_8\obj\Debug\net6.0\Task_HW_seminar_8.pdb
+E:\HW_seminar8\Task_HW_seminar_8\obj\Debug\net6.0\Task_HW_seminar_8.genruntimeconfig.cache
+E:\HW_seminar8\Task_HW_seminar_8\obj\Debug\net6.0\ref\Task_HW_seminar_8.dll
