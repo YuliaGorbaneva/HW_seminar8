@@ -287,3 +287,59 @@ void PrintNewMatrix(int [,] matrix)
         Console.WriteLine();
     }
 }
+
+// Задача 60. Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. 
+// Напишите программу, которая будет построчно выводить массив, добавляя индексы каждого элемента.
+
+// Task60();
+
+void Task60()
+{
+    int [,,] massiv = InitNewMassiv();
+    FillNewMassiv(massiv);
+    PrintIndexMasiv(massiv);
+}
+
+int [,,] InitNewMassiv()
+{
+    Console.WriteLine("Enter first lenght: ");
+    int first = int.Parse(Console.ReadLine());
+    Console.WriteLine("Enter second lenght: ");
+    int second = int.Parse(Console.ReadLine());
+    Console.WriteLine("Enter third lenght: ");
+    int third = int.Parse(Console.ReadLine());
+    return new int [first,second,third];
+}
+
+void FillNewMassiv(int [,,] massiv)
+{
+    int [,,] mass = new int [massiv.GetLength(0), massiv.GetLength(1), massiv.GetLength(2)];
+    for (int i = 0; i < massiv.GetLength(0); i++)
+    {
+        for (int j = 0; j < massiv.GetLength(1); j++)
+        {
+            int k = 0;
+            while (k < massiv.GetLength(2))
+            {
+                int numbers = new Random().Next(10,100);
+                massiv[i,j,k] = numbers;
+                k++;
+            }
+        }
+    }
+}
+
+void PrintIndexMasiv(int [,,] massiv)
+{
+    for  (int i = 0; i < massiv.GetLength(0); i++)
+    {
+        for (int j = 0; j < massiv.GetLength(1); j++)
+        {
+            for (int k = 0; k < massiv.GetLength(2); k++)
+            {
+                Console.Write($"{massiv[i,j,k]} ({i} {j} {k}) ");
+            }
+            Console.WriteLine();
+        }
+    }
+}
