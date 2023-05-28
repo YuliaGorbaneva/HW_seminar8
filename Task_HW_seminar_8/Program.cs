@@ -72,19 +72,24 @@ void ChangeElementMassiv(int [,] massiv)
 // Задача 56: Задайте прямоугольный двумерный массив. 
 // Напишите программу, которая будет находить строку с наименьшей суммой элементов.
 
-Task56();
+// Task56();
 
 void Task56()
 {
     int [,] massiv = SetSazeMassiv();
-    SizeMAssiv(massiv);  
-    Console.WriteLine();
-    FillArray(massiv);
-    PrintArray(massiv);
-    Console.WriteLine();
-    MinSummLine(massiv);
-    FillMinSummRow(massiv);
-
+    if (massiv.GetLength(0) == massiv.GetLength(1))
+    {
+        Console.WriteLine("The strings don't have to be equal. Try again.");
+    }
+    else
+    {
+        Console.WriteLine();
+        FillArray(massiv);
+        PrintArray(massiv);
+        Console.WriteLine();
+        MinSummLine(massiv);
+        FillMinSummRow(massiv);
+    }
 
 }
 
@@ -98,22 +103,13 @@ int [,] SetSazeMassiv()
     
 }
 
-bool SizeMAssiv(int [,] massiv)
-{
-    if (massiv.GetLength(0) == massiv.GetLength(1))
-    {
-        Console.WriteLine("The strings don't have to be equal. Try again.");
-    }
-    return false;
-}
-
 void FillArray(int [,] massiv)
 {
     for (int i = 0; i < massiv.GetLength(0); i++)
     {
         for (int j = 0; j < massiv.GetLength(1); j++)
         {
-            int numbers = new Random().Next(1,10);//(byte.MinValue,byte.MaxValue);
+            int numbers = new Random().Next(byte.MinValue,byte.MaxValue);
             massiv[i,j] = numbers;
         }
     }
@@ -171,3 +167,116 @@ void FillMinSummRow(int [,] massiv)
 
 // Задача 58: Задайте две матрицы. Напишите программу, которая будет 
 // находить произведение двух матриц.
+
+Task58();
+
+void Task58()
+{
+    int [,] firstMatrix = WriteFirstMatrix();
+    int [,] secondMatrix = WriteSecondMatrix();
+    Console.WriteLine();
+    if (firstMatrix.GetLength(1) != secondMatrix.GetLength(0))
+    {
+        Console.WriteLine("False, the number of rows and columns must match");
+    }
+    else
+    {
+        FillFirstMatrix(firstMatrix);
+        PrintFirstMatrix(firstMatrix);
+        Console.WriteLine();
+        FillSecondMatrix(secondMatrix);
+        PrintSecondMatrix(secondMatrix);
+        Console.WriteLine();
+        int [,] matrix = MultiplyMatrix(firstMatrix,secondMatrix);
+        Console.WriteLine(matrix);
+    }
+
+}
+
+int [,] WriteFirstMatrix()
+{
+    Console.WriteLine("write first size: ");
+    int firstLine1 = int.Parse(Console.ReadLine());
+    Console.WriteLine("write second size: ");
+    int secondLine1 = int.Parse(Console.ReadLine());
+    return new int [firstLine1, secondLine1];
+}
+
+int [,] WriteSecondMatrix()
+{
+    Console.WriteLine("write first size: ");
+    int firstLine2 = int.Parse(Console.ReadLine());
+    Console.WriteLine("write second size: ");
+    int secondLine2 = int.Parse(Console.ReadLine());
+    return new int [firstLine2, secondLine2];
+}
+
+void FillFirstMatrix(int [,] firstMatrix)
+{
+    for (int i = 0; i < firstMatrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < firstMatrix.GetLength(1); j++)
+        {
+            int number = new Random().Next(1,10);
+            firstMatrix [i,j] = number;
+        }
+    }
+}
+
+void PrintFirstMatrix(int [,] firstMatrix)
+{
+    for (int i = 0; i < firstMatrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < firstMatrix.GetLength(1); j++)
+        {
+            Console.Write($"{firstMatrix[i,j]} ");
+        }
+        Console.WriteLine();
+    }
+}
+
+void FillSecondMatrix(int [,] secondMatrix)
+{
+    for (int k = 0; k < secondMatrix.GetLength(0); k++)
+    {
+        for (int t = 0; t < secondMatrix.GetLength(1); t++)
+        {
+            int number = new Random().Next(1,10);
+            secondMatrix [k,t] = number;
+        }
+    }
+}
+
+void PrintSecondMatrix(int [,] secondMatrix)
+{
+    for (int k = 0; k < secondMatrix.GetLength(0); k++)
+    {
+        for (int t = 0; t < secondMatrix.GetLength(1); t++)
+        {
+            Console.Write($"{secondMatrix[k,t]} ");
+        }
+        Console.WriteLine();
+    }
+}
+
+int [,] MultiplyMatrix(int [,] firstMatrix, int [,] secondMatrix)
+{
+    int [,] matrix = new int [firstMatrix.GetLength(0), secondMatrix.GetLength(1)];
+    // int multiplyFirstLane = 0;
+    // int multiplySecondLane = 0;
+    for (int i = 0; i < firstMatrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < secondMatrix.GetLength(1); j++)
+        {
+            int sumMatrix = 0;
+            for (int x = 0; x < firstMatrix.GetLength(0); x++)
+            {
+               sumMatrix += matrix[i,x] * matrix[x, j]; 
+            }
+            matrix[i,j] = sumMatrix;
+        }
+    }
+    return matrix;
+    Console.WriteLine(matrix);
+}
+
