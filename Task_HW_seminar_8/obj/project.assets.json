@@ -8,7 +8,7 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\79326\\.nuget\\packages\\": {}
+    "C:\\Users\\Gleee\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -16,11 +16,11 @@
       "projectUniqueName": "E:\\HW_seminar8\\Task_HW_seminar_8\\Task_HW_seminar_8.csproj",
       "projectName": "Task_HW_seminar_8",
       "projectPath": "E:\\HW_seminar8\\Task_HW_seminar_8\\Task_HW_seminar_8.csproj",
-      "packagesPath": "C:\\Users\\79326\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\Gleee\\.nuget\\packages\\",
       "outputPath": "E:\\HW_seminar8\\Task_HW_seminar_8\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\79326\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Gleee\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -59,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.408\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.407\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -188,7 +188,7 @@ void Task58()
         PrintSecondMatrix(secondMatrix);
         Console.WriteLine();
         int [,] matrix = MultiplyMatrix(firstMatrix,secondMatrix);
-        Console.WriteLine(matrix);
+        PrintNewMatrix(matrix);
     }
 
 }
@@ -262,21 +262,28 @@ void PrintSecondMatrix(int [,] secondMatrix)
 int [,] MultiplyMatrix(int [,] firstMatrix, int [,] secondMatrix)
 {
     int [,] matrix = new int [firstMatrix.GetLength(0), secondMatrix.GetLength(1)];
-    // int multiplyFirstLane = 0;
-    // int multiplySecondLane = 0;
+
     for (int i = 0; i < firstMatrix.GetLength(0); i++)
     {
         for (int j = 0; j < secondMatrix.GetLength(1); j++)
         {
-            int sumMatrix = 0;
-            for (int x = 0; x < firstMatrix.GetLength(0); x++)
+            for (int x = 0; x < firstMatrix.GetLength(1); x++)
             {
-               sumMatrix += matrix[i,x] * matrix[x, j]; 
+                matrix[i,j] += firstMatrix[i,x] * secondMatrix[x, j]; 
             }
-            matrix[i,j] = sumMatrix;
         }
     }
     return matrix;
-    Console.WriteLine(matrix);
 }
 
+void PrintNewMatrix(int [,] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            Console.Write($"{matrix[i,j]} ");
+        }
+        Console.WriteLine();
+    }
+}
